@@ -2,6 +2,8 @@
 function merge(left, right) {
   var result = [];
 
+  console.log("merging " + left + " with " + right);
+
   // Comparison
   while(left.length && right.length) {
     if(left[0] <= right[0])
@@ -16,11 +18,13 @@ function merge(left, right) {
   while(right.length)
     result.push(right.shift());
 
+  console.log("result is " + result);
   return result;
 }
 
 // Recurring part of the algorithm
 function mergeSort(arr) {
+  console.log("working on " + arr);
   if(arr.length < 2)
     return arr;
 
